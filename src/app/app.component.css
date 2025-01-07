@@ -1,0 +1,55 @@
+mat-sidenav-container {
+  height: 100%;  
+}
+
+mat-sidenav {
+  min-width: 150px;
+  padding: 0px 15px 0px 0px;
+  background-color: rgb(22, 34, 87);
+  
+}
+
+.header {
+  top: 0px;
+  width: 100%;
+  height: 64px;
+  padding: 10px;
+}
+
+.footer {
+  bottom: 0px;
+  width: 100%;
+  height: 64px;
+  padding: 10px;
+}
+
+mat-sidenav-content {  
+  /* padding: 20px; */
+  
+}
+
+.content {
+  padding: 0px 15px;
+}
+
+.sidenav {
+  padding: 0px 15px;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column; /* Stack the elements vertically */
+  height: 100vh; /* Full viewport height */
+}
+
+/* Ensure the sidenav container takes full height minus toolbar */
+.content-container {
+  margin: 15px 15px;
+  /* padding: 20px 20px; */
+  flex: 1; /* This will allow the content to expand and fill the remaining space */  
+  overflow-y: auto; /* Optional: allows scrolling if content overflows */
+}
+
+.sidenav-container {
+  background-color: rgb(22, 34, 87);
+}
