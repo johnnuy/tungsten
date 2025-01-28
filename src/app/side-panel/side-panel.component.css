@@ -1,0 +1,5 @@
+.content {
+  /*padding: 0px 15px;*/
+  height: calc(100% - 4px);
+  overflow-y: auto;
+}

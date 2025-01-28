@@ -1,37 +1,40 @@
 <div class="page-container">
-  
-  <mat-toolbar class="header" color="primary">
-    
-    <span>My Angular App</span>
+
+  <mat-toolbar class="header">
+
+    <span>My Angular Header</span>
     <button mat-icon-button (click)="isSidenavOpen = !isSidenavOpen">
       <mat-icon>menu</mat-icon>
     </button>
-    
+
     <span style="flex: 1 1 auto;"></span>
-    <mat-select [(ngModel)]="selectedNetwork" style="width: 150px; margin-right: 10px;">
-      <mat-option *ngFor="let network of networks" [value]="network">{{ network }}</mat-option>
+    <mat-select [(ngModel)]="selectedNetwork" style="width: 130px; margin-right: 10px;">
+      @for (network of networks; track network) {
+        <mat-option [value]="network">{{ network }}</mat-option>
+      }
     </mat-select>
     <mat-select [(ngModel)]="selectedLanguage" style="width: 150px;">
-      <mat-option *ngFor="let language of languages" [value]="language">{{ language }}</mat-option>
+      @for (language of languages; track language) {
+        <mat-option [value]="language">{{ language }}</mat-option>
+      }
     </mat-select>
   </mat-toolbar>
 
-  <mat-card class="content-container">
-    <mat-sidenav-container class="sidenav-container">
-      <mat-sidenav #sidenav [(opened)]="isSidenavOpen" mode="side">
-        <mat-card class="sidenav">
-          <p>Sidenav Content</p>
-        </mat-card>
-      </mat-sidenav>
-  
-      <mat-sidenav-content>
-        <mat-card class="content">
-          <p>Main Content</p>
-        </mat-card>
-      </mat-sidenav-content>
-    </mat-sidenav-container>
-  </mat-card>
+  <mat-sidenav-container class="sidenav-container">
 
+    <mat-sidenav #sidenav [(opened)]="isSidenavOpen" mode="side" class="sidenav-content">
+      <mat-card class="sidenav-links">
+        First Card
+      </mat-card>  
+      <mat-card class="sidenav-wallets">
+        <tungsten-side-panel style="height:100%"></tungsten-side-panel>
+      </mat-card>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="main-content">          
+      <tungsten-search-panel url=""></tungsten-search-panel>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 
   <mat-toolbar class="footer" color="primary">
     <span>My Angular Footer</span>

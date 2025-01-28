@@ -1,0 +1,15 @@
+.search-content-header {
+  margin-bottom: 1em;
+}
+
+.search-content-container {
+  display: flex;
+}
+
+.search-content-input {
+  flex: 1;
+}
+
+.search-content-button {
+  margin-left:16px;
+}

@@ -1,12 +1,7 @@
-mat-sidenav-container {
-  height: 100%;  
-}
-
 mat-sidenav {
   min-width: 150px;
   padding: 0px 15px 0px 0px;
-  background-color: rgb(22, 34, 87);
-  
+  /* background-color: rgb(22, 34, 87); */
 }
 
 .header {
@@ -14,6 +9,7 @@ mat-sidenav {
   width: 100%;
   height: 64px;
   padding: 10px;
+  background-color: rgb(90, 115, 228);
 }
 
 .footer {
@@ -21,35 +17,45 @@ mat-sidenav {
   width: 100%;
   height: 64px;
   padding: 10px;
-}
-
-mat-sidenav-content {  
-  /* padding: 20px; */
-  
+  background-color: rgb(1, 8, 43);
+  color: aliceblue;
 }
 
 .content {
   padding: 0px 15px;
-}
-
-.sidenav {
-  padding: 0px 15px;
+  height: 100%;
 }
 
 .page-container {
   display: flex;
   flex-direction: column; /* Stack the elements vertically */
   height: 100vh; /* Full viewport height */
-}
-
-/* Ensure the sidenav container takes full height minus toolbar */
-.content-container {
-  margin: 15px 15px;
-  /* padding: 20px 20px; */
-  flex: 1; /* This will allow the content to expand and fill the remaining space */  
-  overflow-y: auto; /* Optional: allows scrolling if content overflows */
+  background-color: rgb(22, 3, 131);
 }
 
 .sidenav-container {
-  background-color: rgb(22, 34, 87);
+  height: 100%;
+  margin: 15px 15px;
+  flex: 1; /* This will allow the content to expand and fill the remaining space */ 
+}
+
+.sidenav-content {
+  padding: 10px 10px;
+}
+
+.wallet-nav {
+  height: 50%;
+}
+
+.main-content {
+  padding: 10px 10px;
+}
+
+.sidenav-links {  
+  height: 250px;
+}
+
+.sidenav-wallets {
+  margin-top: 10px;
+  height: calc(100% - 260px);
 }
